@@ -42,9 +42,6 @@
     "vite": "^5.3.4"
   },
   "lint-staged": {
-    "/": "npm run type-check",
-    "src/**/*.{js,jsx,ts,tsx}": [
-      "npm run lint:fix"
-    ]
+    "src/**/*.{js,jsx,ts,tsx}": "npm run lint:fix"
   }
 }
