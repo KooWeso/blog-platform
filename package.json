@@ -43,7 +43,6 @@
   },
   "lint-staged": {
     "src/**/*": "npm run format",
-    "*.{ts, tsx, d.ts, cts, d.cts, mts, d.mts}": "npm run type-check",
     "src/**/*.{js,jsx,ts,tsx}": [
       "npm run lint:fix"
     ]
