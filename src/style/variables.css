@@ -1,0 +1,19 @@
+:root {
+  /* font */
+  --f-size-normal: 0.75rem;
+  --f-size-mid: 0.8125rem;
+  --f-size-midplus: 0.875rem;
+  --f-size-big: 1.5rem;
+  --f-weight-fat: 600;
+  --l-spacing: 0.5px;
+  /* gaps */
+  --gap: 0.5rem;
+  --gap-el: 1.25rem;
+  /* padding */
+  --p: 10px;
+  --p-el: 1.25rem;
+  /* size */
+  --h-size-title: 3.125rem; /* title size */
+  /* border */
+  --rad: 5px;
+}

@@ -1,0 +1,61 @@
+.app {
+  width: 768px;
+  display: flex;
+  gap: var(--gap-el);
+
+  @media (max-width: 768px) {
+    padding-inline: var(--p-el);
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &_content {
+    flex: 1;
+  }
+
+  &_header {
+    height: 12.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &_img {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: transparent;
+    border: none;
+
+    animation: rotate 360s linear infinite;
+
+    @keyframes rotate {
+      0% {
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    &-plane {
+      position: absolute;
+      transform: translateY(-0.3rem);
+    }
+  }
+
+  &_dark {
+    filter: invert(1);
+
+    animation: rotateback 360s linear infinite;
+
+    @keyframes rotateback {
+      0% {
+      }
+      100% {
+        transform: rotate(-360deg);
+      }
+    }
+  }
+}
