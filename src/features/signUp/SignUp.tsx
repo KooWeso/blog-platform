@@ -36,8 +36,6 @@ const SignUp = () => {
       setStatus(setInterval(() => setRedirectCount((count) => count - 1), 1000))
       setRedirectCount(5)
     }
-
-    return () => clearInterval(status)
   }, [isSuccess, navigate, redirectCount, status])
 
   if (isError && status === 0) {
