@@ -111,7 +111,7 @@ const EditPost = () => {
               name="body"
               rules={[
                 { required: true, message: 'You have to write something' },
-                { max: 10000, message: 'This text is too long 🐱‍👤' },
+                { max: 200000, message: 'This text is more than 200000 words 🐱‍👤', warningOnly: true },
               ]}
             >
               <Input.TextArea rows={20} placeholder="You can use Markdown" />
