@@ -1,0 +1,15 @@
+.posts {
+  display: flex !important;
+  justify-content: center !important;
+
+  &__wrapper {
+    padding: 1rem;
+    min-height: 8.75rem;
+    max-width: 70vw;
+    flex: 1;
+
+    @media (max-width: 768px) {
+      max-width: 100%;
+    }
+  }
+}

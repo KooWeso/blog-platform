@@ -1,10 +1,17 @@
 import type { Action, ThunkAction } from '@reduxjs/toolkit'
 import { configureStore, combineSlices } from '@reduxjs/toolkit'
 
-export const rootReducer = combineSlices()
+// import apiSlice from '../features/api/apiSlice'
+import apiSlice from '../features/api/apiSlice'
+import { profileSlice } from '../features/profile/profileSlice'
+
+export const rootReducer = combineSlices(apiSlice, profileSlice)
 
 export const store = configureStore({
   reducer: rootReducer,
+  middleware: (getDefaultMiddleware) => {
+    return getDefaultMiddleware().concat(apiSlice.middleware)
+  },
 })
 
 type AppStore = typeof store

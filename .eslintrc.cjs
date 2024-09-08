@@ -10,6 +10,10 @@ module.exports = {
     'plugin:@typescript-eslint/recommended-type-checked',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
+    'plugin:import/recommended',
+    'plugin:import/typescript',
+    'plugin:jsx-a11y/recommended',
+    'plugin:react-hooks/recommended',
     'plugin:prettier/recommended',
   ],
   overrides: [
@@ -29,17 +33,19 @@ module.exports = {
     sourceType: 'module',
     project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
   },
-  plugins: ['@typescript-eslint', 'react', 'prettier'],
+  plugins: ['@typescript-eslint', 'react', 'prettier', 'import', 'jsx-a11y', 'react-hooks', 'react-refresh'],
   rules: {
+    'react/function-component-definition': 0,
+    'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
     'import/no-extraneous-dependencies': [
       'error',
       {
-        devDependencies: ['vite.config.ts'],
-        optionalDependencies: ['vite.config.ts'],
-        peerDependencies: ['vite.config.ts'],
+        devDependencies: ['*.config.ts', '*.config.js'],
       },
     ],
-    indent: ['error', 2],
+    // label-has-for has been deprecated
+    'jsx-a11y/label-has-for': 0,
+    'no-plusplus': 0,
     'prettier/prettier': 2,
     'linebreak-style': [0, 'unix'],
     quotes: ['error', 'single'],
@@ -76,6 +82,9 @@ module.exports = {
     ],
   },
   settings: {
+    // 'import/resolver': {
+    //   typescript: {},
+    // },
     'import/resolver': {
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],

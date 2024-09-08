@@ -1,12 +1,13 @@
-@import url(./style/font.css);
+/* @import url(./style/font.css);
 @import url(./style/variables.css);
-@import url(./style/colors.css);
+@import url(./style/colors.css); */
+@import url(./style/markdown.css);
 
 :root {
-  font-family: 'Open Sans', system-ui, sans-serif;
+  font-family: system-ui, sans-serif;
 
   color-scheme: light;
-
+  overflow-wrap: anywhere;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -23,21 +24,11 @@
   box-sizing: border-box;
 }
 
+/* 
+XXX using antd now
+
 li {
   list-style: none;
-}
+} */
 
 /* ///// */
-
-body {
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
-  background-color: var(--background);
-}
-
-@media (max-width: 768px) {
-  body > div {
-    flex: 1;
-  }
-}
