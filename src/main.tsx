@@ -10,7 +10,7 @@ import './index.css'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Provider store={store}>
-      <Router>
+      <Router basename="/">
         <Routes>
           <Route path="/*" element={<App />} />
         </Routes>
