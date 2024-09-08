@@ -10,7 +10,7 @@ import './index.css'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Provider store={store}>
-      <Router>
+      <Router basename="https://blog-platform-kata-delta.vercel.app/">
         <Routes>
           <Route path="/*" element={<App />} />
         </Routes>
