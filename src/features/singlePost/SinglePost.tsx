@@ -45,7 +45,7 @@ const SinglePost = () => {
           remarkPlugins={[remarkGfm, remarkBreaks]}
           rehypePlugins={[rehypeRaw, rehypeHighlight]}
         >
-          {article.body.replace(/\n/gi, '  \n')}
+          {article.body ? article.body.replace(/\n/gi, '  \n') : 'Nothing here (* ￣︿￣)'}
         </ReactMarkdown>
       </ContentWrapper>
     )

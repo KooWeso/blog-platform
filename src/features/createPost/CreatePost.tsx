@@ -96,8 +96,8 @@ const CreatePost = () => {
             label="Content"
             name="body"
             rules={[
-              { required: true, message: 'You have to write something' },
-              { max: 200000, message: 'This text is more than 200000 words 🐱‍👤', warningOnly: true },
+              { required: true, message: 'You have to write something, or maybe not', warningOnly: true },
+              { max: 100000, message: 'This text is more than 100000 words 🐱‍👤', warningOnly: true },
             ]}
           >
             <Input.TextArea rows={20} placeholder="You can use Markdown" />

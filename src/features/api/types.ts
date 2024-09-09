@@ -2,7 +2,7 @@ export interface Post {
   slug: string
   title: string
   description: string
-  body: string
+  body?: string
   createdAt: string
   updatedAt: string
   tagList: string[]
